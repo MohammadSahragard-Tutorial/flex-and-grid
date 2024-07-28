@@ -12,6 +12,38 @@
             content="Simple Tutorial for the grid and flex system"
         />
     </head>
-    
-    <body></body>
+
+    <body>
+        <!-- با توجه به تصویر، دوتا سطر درون کانتینر و ظرف اصلی داریم -->
+        <div class="container">
+            <!-- سطر اول _ که شامل دوتا ستون میشه که اولی دو برابر دومی هست -->
+            <div class="first-row">
+                <!-- ستون اول _ که شامل سه ستون میشه که یکی وسطی دو برابر دوتای دیگس -->
+                <div class="first-col">
+                    <div class="column-1"></div>
+                    <div class="column-2"></div>
+                    <div class="column-3"></div>
+                </div>
+
+                <!-- ستون دوم _ که شامل یک دیو میشه که در وسط جای داره -->
+                <div class="second-col">
+                    <div class="middle-div"></div>
+                </div>
+            </div>
+
+            <!-- سطر دوم _ که شامل دوتا بخش میشه که دومی دو برابر اولی هست -->
+            <div class="second-row">
+                <!-- ستون اول _ که شامل یک دیو میشه که در هر دو محور در آخر جای داره -->
+                <div class="first-col">
+                    <div class="end-div"></div>
+                </div>
+
+                <!-- ستون دوم _ که شامل دوتا دیو میشه که در محور افقی در آخر و در محور عمودی در اول قرار داره -->
+                <div class="second-col">
+                    <div class="first-div"></div>
+                    <div class="second-div"></div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
