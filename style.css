@@ -1,7 +1,98 @@
-/* Primary */
-html {
+/*--------------- Primary */
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* پس زمینه خاکستری یا طوسی */
+.gray-bg {
+    background-color: #d9d9d9;
+}
+/* پس زمینه دودی یا خاکستری مایل به مشکی */
+.smoke-bg {
+    background-color: #bdbdbd;
+}
+
+/*--------------- Main styles */
+.container {
+    height: 100vh;
+    padding: 25px;
+
+    /* از اونجایی که دوتا سطر برابر بود و کل صفحه رو میگرفت از گرید استفاده میکنیم */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+/* 
+    --------------------------
+    First row
+    سطر اول _ که شامل دوتا ستون میشه که اولی دو برابر دومی هست  
+    --------------------------
+*/
+.first-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    
+    /* ستون اول _ که شامل سه ستون میشه که یکی وسطی دو برابر دوتای دیگس  */
+    .first-col {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 25px;
+        padding: 25px;
+    }
+    
+    /*  ستون دوم _ که شامل یک دیو میشه که در وسط جای داره  */
+    .second-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .middle-div {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+/* 
+    --------------------------
+    Second row
+    سطر دوم _ که شامل دوتا بخش میشه که دومی دو برابر اولی هست 
+    --------------------------
+*/
+.second-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+
+    /* ستون اول _ که شامل یک دیو میشه که در هر دو محور در آخر جای داره  */
+    .first-col {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 25px;
+
+        .end-div {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    /* ستون دوم _ که شامل دوتا دیو میشه که در محور افقی در آخر و در محور عمودی در اول قرار داره */
+    .second-col {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
